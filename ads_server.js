@@ -1,18 +1,7 @@
-const http = require('http');
+const express = require('express')
+const app = express()
+const port = 3000
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.post('/ad', (req, res) => res.send('add new ad'))
 
-const server = http.createServer((req, res) => {
-    if(req.url === '/ad' && req.method == 'POST'){
-       res.end('add new ad');
-    } else {
-    	res.writeHead(400, {'Content-Type': 'text/plain'});
-    	res.end();
-    }
-
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aviillouz/potato-ads/issues"
   },
-  "homepage": "https://github.com/aviillouz/potato-ads#readme"
+  "homepage": "https://github.com/aviillouz/potato-ads#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
