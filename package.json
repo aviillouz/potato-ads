@@ -1,0 +1,19 @@
+{
+  "name": "potato-ads",
+  "version": "1.0.0",
+  "description": "potato ads server",
+  "main": "ads_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aviillouz/potato-ads.git"
+  },
+  "author": "avi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aviillouz/potato-ads/issues"
+  },
+  "homepage": "https://github.com/aviillouz/potato-ads#readme"
+}
