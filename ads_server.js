@@ -6,8 +6,8 @@ var db = require('./mysql_client')
 
 app.post('/ad', (req, res) => {
 
+	db.query('insert into potato.ads (role, description) values ("a", "b");');
 	res.send('add new ad');
-	db.query('select * from potato.ads');
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
