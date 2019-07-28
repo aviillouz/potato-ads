@@ -1,6 +1,7 @@
 ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY '1234';
 flush privileges;
-create database potato;
+CREATE DATABASE IF NOT EXISTS potato;
+use potato;
 create table potato.ads (
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	role text,
