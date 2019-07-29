@@ -1,17 +1,21 @@
 var mysql = require('mysql');
 
-console.log('3')
 var connection = mysql.createConnection({
-	host: "localhost",
+	host: "db",
 	port: "3306",
 	user: "root",
 	password: "1234"
 });
 
-connection.connect(function(err) {
-	if (err) throw err;
-	console.log("Connected!");
-});
+setTimeout(initServer, 5000)
+
+function initServer() {
+		connection.connect(function(err) {
+		if (err) throw err;
+		console.log("Connected!");
+	});
+}
+
 
 module.exports = {
 	query: function (sql) {

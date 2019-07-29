@@ -1,5 +1,12 @@
 version: "2"
 services:
+    ads_server:
+      container_name: ads_server
+      image: avi/ads_server
+      ports:
+        - "3000:3000"
+      depends_on:
+        - db
     db:
       container_name: db
       image: mysql
