@@ -1,4 +1,11 @@
 # potato-ads
-## potato ads sandbox project
+## potato ads sandbox project 
 
 potato ads is a platform to publish and search ads.
+
+## how to run
+`docker-compose up` 
+should build and start an _ads_server_ container and a mysql contiainer with schema.
+
+## known issues
+server panics when it can't connect to mysql (should retry in future version)
