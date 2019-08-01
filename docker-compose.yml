@@ -1,6 +1,7 @@
 version: "2"
 services:
     ads_server:
+      build: .
       container_name: ads_server
       image: avi/ads_server
       ports:
