@@ -19,6 +19,6 @@ services:
          - MYSQL_DATABASE=potato
 
       volumes:
-         - /home/avi/Projects/potato-ads/db/mysql/data:/var/lib/mysql
-         - /home/avi/Projects/potato-ads/db/mysql/init:/docker-entrypoint-initdb.d/:ro
+         - /home/avi/Projects/potato-ads/ads_server/db/mysql/data:/var/lib/mysql
+         - /home/avi/Projects/potato-ads/ads_server/db/mysql/init:/docker-entrypoint-initdb.d/:ro
       restart: always
