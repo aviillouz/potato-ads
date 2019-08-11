@@ -8,6 +8,7 @@ services:
         - "3000:3000"
       depends_on:
         - db
+      restart: always
     db:
       container_name: db
       image: mysql
@@ -20,3 +21,4 @@ services:
       volumes:
          - /home/avi/Projects/potato-ads/db/mysql/data:/var/lib/mysql
          - /home/avi/Projects/potato-ads/db/mysql/init:/docker-entrypoint-initdb.d/:ro
+      restart: always
