@@ -5,16 +5,16 @@
             <th>role</th>
             <th>description</th>
             <th>created at</th>
-            <th>updated at</th>
+            <th>updated at</th>>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>a</td>
-            <td>2</td>
-            <td>6</td>
-            <td>p</td>
+        <tr *ngFor="let ad of ads">
+            <td>{{ad.id}}</td>
+            <td>{{ad.role}}</td>
+            <td>{{ad.description}}</td>
+            <td>{{ad.createdAt}}</td>
+            <td>{{ad.updatedAt}}</td>
         </tr>
     </tbody>
 </table>
