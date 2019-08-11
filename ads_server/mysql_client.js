@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 setTimeout(initServer, 5000)
 
 function initServer() {
-		connection.connect(function(err) {
+	connection.connect(function (err) {
 		if (err) throw err;
 		console.log("Connected!");
 	});
@@ -21,8 +21,9 @@ module.exports = {
 	query: function (sql) {
 		connection.query(sql, function (err, result) {
 			if (err) throw err;
-			console.log("Result: " + result);
+			console.log(result);
 		});
-	}
-}; 
+	},
+	connection
+};
 
