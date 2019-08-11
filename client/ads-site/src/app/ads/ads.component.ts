@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ad } from '../ad';
+import { AdsService } from '../ads.service';
 
 @Component({
   selector: 'app-ads',
@@ -8,14 +9,12 @@ import { Ad } from '../ad';
 })
 export class AdsComponent implements OnInit {
 
-  ads: Ad[] = [
-    { id: 1, role: "a", description: "b", createdAt: new Date(), updatedAt: new Date() },
-    { id: 2, role: "c", description: "d", createdAt: new Date(), updatedAt: new Date() }
-  ];
+  ads: Ad[];
 
-  constructor() { }
+  constructor(private adsService: AdsService) { }
 
   ngOnInit() {
+    this.ads = this.adsService.getAds();
   }
 
 }
