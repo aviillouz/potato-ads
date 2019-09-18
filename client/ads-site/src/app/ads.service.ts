@@ -12,7 +12,7 @@ export class AdsService {
   constructor(private http: HttpClient) { }
 
   getAds(): Observable<Ad[]> {
-    return this.http.get<Ad[]>("localhost:3000/ads");
+    return this.http.get<Ad[]>("http://localhost:3000/ads");
 
     // return of([
     //   { id: 1, role: "a", description: "b", createdAt: new Date(), updatedAt: new Date() },
